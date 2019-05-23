@@ -5,6 +5,7 @@ from pygame import mixer
 from tkinter import filedialog
 import threading
 from tkinter import ttk
+from ttkthemes import themed_tk as tk
 from mutagen.mp3 import MP3
 import time
 
@@ -138,7 +139,9 @@ def on_closing():
     stop_music()
     root.destroy()
 
-root = Tk()
+root = tk.ThemedTk()
+root.get_themes()
+root.set_theme("radiance")
 
 #created the menu bar
 
